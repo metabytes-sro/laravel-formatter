@@ -1,22 +1,32 @@
 {
-    "name": "soapbox/laravel-formatter",
-    "type": "library",
+    "name": "ejetar/laravel-formatter",
     "description": "A formatting library that converts data output between XML, CSV, JSON, TXT, YAML and a few others.",
-    "keywords": ["laravel", "formatter", "data", "convert", "csv", "xml", "yaml"],
-    "homepage": "http://github.com/SoapBox/laravel-formatter",
+    "homepage": "https://ejetar.com/projects/laravel-formatter",
+    "version": "3.1.2",
+    "readme": "README.md",
+    "type": "library",
     "license": "MIT",
-    "version": "3.1.1",
     "authors": [
         {
-            "name": "Graham McCarthy",
-            "email": "graham@soapboxhq.com",
-            "homepage": "http://grahammccarthy.com"
-        },
-        {
-            "name": "Jaspaul Bola",
-            "email": "jaspaul.b@gamil.com",
-            "homepage": "http://jaspaulbola.com"
+            "name": "Guilherme Almeida Girardi",
+            "email": "guilhermeagirardi@gmail.com",
+            "homepage": "https://guilhermegirardi.com",
+            "role": "Developer"
         }
+    ],
+    "keywords": [
+        "php",
+        "laravel",
+        "format",
+        "formatter",
+        "output",
+        "response",
+        "data",
+        "convert",
+        "json",
+        "csv",
+        "xml",
+        "yaml"
     ],
     "require": {
         "php" : ">=7.0.10",
@@ -29,15 +39,18 @@
     },
     "autoload": {
         "psr-4": {
-            "SoapBox\\Formatter\\": "src/"
+            "Ejetar\\Formatter\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "aliases": {
-                "Formatter": "SoapBox\\Formatter"
+                "Formatter": "Ejetar\\Formatter"
             }
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "vendor\\bin\\phpunit"
+    }
 }

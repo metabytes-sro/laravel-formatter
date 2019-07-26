@@ -1,8 +1,8 @@
-<?php namespace SoapBox\Formatter\Test\Parsers;
+<?php namespace Ejetar\Formatter\Test\Parsers;
 
-use SoapBox\Formatter\Parsers\CsvParser;
-use SoapBox\Formatter\Parsers\Parser;
-use SoapBox\Formatter\Test\TestCase;
+use Ejetar\Formatter\Parsers\CsvParser;
+use Ejetar\Formatter\Parsers\Parser;
+use Ejetar\Formatter\Test\TestCase;
 
 class CsvParserTest extends TestCase
 {

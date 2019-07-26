@@ -1,7 +1,7 @@
-<?php namespace SoapBox\Formatter\Parsers;
+<?php namespace Ejetar\Formatter\Parsers;
 
 use Illuminate\Support\Str;
-use SoapBox\Formatter\ArrayHelpers;
+use Ejetar\Formatter\ArrayHelpers;
 use Spyc;
 
 /**

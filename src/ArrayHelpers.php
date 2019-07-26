@@ -1,4 +1,5 @@
-<?php namespace SoapBox\Formatter;
+<?php
+namespace Ejetar\Formatter;
 
 use Illuminate\Support\Arr;
 

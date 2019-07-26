@@ -1,15 +1,13 @@
-<?php namespace SoapBox\Formatter;
+<?php namespace Ejetar\Formatter;
 
 use InvalidArgumentException;
-use SoapBox\Formatter\Formatter as Formatter;
-use SoapBox\Formatter\Parsers\ArrayParser;
-use SoapBox\Formatter\Parsers\CsvParser;
-use SoapBox\Formatter\Parsers\JsonParser;
-use SoapBox\Formatter\Parsers\XmlParser;
-use SoapBox\Formatter\Parsers\YamlParser;
+use Ejetar\Formatter\Parsers\ArrayParser;
+use Ejetar\Formatter\Parsers\CsvParser;
+use Ejetar\Formatter\Parsers\JsonParser;
+use Ejetar\Formatter\Parsers\XmlParser;
+use Ejetar\Formatter\Parsers\YamlParser;
 
-class Formatter
-{
+class Formatter {
     /**
      * Add class constants that help define input format
      */

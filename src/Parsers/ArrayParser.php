@@ -1,4 +1,4 @@
-<?php namespace SoapBox\Formatter\Parsers;
+<?php namespace Ejetar\Formatter\Parsers;
 
 use InvalidArgumentException;
 
