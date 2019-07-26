@@ -1,44 +1,24 @@
-Changelog
-================
+# Laravel Formatter
 
-- Update composer.json
-- Upgrade to PSR-4
-- add parameter newline, delimiter, enclosure, and escape to export csv
-- When converting a XML to an array, convert @attributes to _attribute_
-- add parameter encoding and formated to export xml
-- JSON parse fix (Instead of only converting the first level to array, use the associative array parameter with true, so all levels will be decoded to array structure)
-- Add support for laravel 5
-- add package discovery for laravel 5
-- add support delimiter to a csv
+## Table of Contents
+  * [About](#about)
+  * [Installation](#installation)
+  * [Parsers](#parsers)
+  * [Formats](#formats)
+  * [General Usage](#general-usage)
+  * [Changelog](#changelog)
+  * [Contributing](#contributing)
+  * [License](#license)
+  
+## About
+A package that enables you to convert your data into various formats such as JSON, XML, CSV and YAML. Based on FuelPHP's 💧 formatter class.
 
-Formatter Bundle
-================
-
-[![Build Status](https://travis-ci.org/SoapBox/laravel-formatter.svg?branch=master)](https://travis-ci.org/SoapBox/laravel-formatter)
-
-A formatter package that will help you to easily convert between various formats such as XML, JSON, CSV, etc...
-
-# Goals
-The goals of this library are to allow the transfomation of data formats from one type to another.
-See Parsers and Formats to see supported input / output formats.
-
-# Installation
+## Installation
 
 Through command line:
 
 ```bash
-composer require soapbox/laravel-formatter
-```
-
-Through composer.json:
-
-```json
-{
-  "require": {
-    "soapbox/laravel-formatter": "2.x"
-  }
-}
-
+composer require ejetar/laravel-formatter
 ```
 
 ## Parsers
@@ -62,7 +42,7 @@ All of the following are formats that are supported for output.
 __Including The Formatter__
 
 ```php
-use SoapBox\Formatter\Formatter;
+use Ejetar\Formatter\Formatter;
 ```
 
 __Supported Types__
@@ -94,18 +74,12 @@ $array = $formatter->toArray();
 $yaml  = $formatter->toYaml();
 ```
 
-## Deprecated Functionality
-The following have been deprecated from the library, however you can easily continue using them in your application
+## Changelog
+Nothing for now...
 
-__Serialized Array__
+## Contributing
+Contribute to this wonderful project, it will be a pleasure to have you with us. Let's help the free software community. You are invited to incorporate new features, make corrections, report bugs, and any other form of support.
+Don't forget to star in this repository! 😀 
 
-```php
-$serialized = serialize($formatter->toArray());
-```
-
-__PHP Export__
-
-```php
-$export = var_export($formatter->toArray());
-```
-
+## License
+This library is a open-source software licensed under the MIT license.
