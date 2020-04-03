@@ -1,7 +1,6 @@
 <?php namespace Ejetar\Formatter;
 
 use Illuminate\Support\ServiceProvider;
-use Ejetar\Formatter\Formatter as Formatter;
 
 /**
  * Used to register Authroize with service providers, mainly for Laravel.
@@ -33,7 +32,7 @@ class FormatterServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['formatter'] = $this->app->share(function ($app) {
-            return new Formatter;
+            return new Ejetar\Formatter\Formatter;
         });
     }
 
