@@ -1,4 +1,4 @@
-<?php namespace Ejetar\Formatter\Parsers;
+<?php namespace MetabytesSRO\Formatter\Parsers;
 
 class XmlParser extends Parser
 {

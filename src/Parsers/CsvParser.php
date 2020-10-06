@@ -1,8 +1,8 @@
-<?php namespace Ejetar\Formatter\Parsers;
+<?php namespace MetabytesSRO\Formatter\Parsers;
 
 use InvalidArgumentException;
 use League\Csv\Reader;
-use Ejetar\Formatter\ArrayHelpers;
+use MetabytesSRO\Formatter\ArrayHelpers;
 
 class CsvParser extends Parser
 {

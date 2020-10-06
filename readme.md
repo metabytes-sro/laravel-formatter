@@ -18,7 +18,7 @@ A package that enables you to convert your data into various formats such as JSO
 Through command line:
 
 ```bash
-composer require ejetar/laravel-formatter
+composer require metabytes-sro/laravel-formatter
 ```
 
 ## Parsers
@@ -42,7 +42,7 @@ All of the following are formats that are supported for output.
 __Including The Formatter__
 
 ```php
-use Ejetar\Formatter\Formatter;
+use MetabytesSRO\Formatter\Formatter;
 ```
 
 __Supported Types__

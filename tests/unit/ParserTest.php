@@ -1,6 +1,6 @@
-<?php namespace Ejetar\Formatter\Test;
+<?php namespace MetabytesSRO\Formatter\Test;
 
-use Ejetar\Formatter\Formatter;
+use MetabytesSRO\Formatter\Formatter;
 
 class ParserTest extends TestCase
 {

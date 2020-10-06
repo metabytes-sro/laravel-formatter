@@ -1,8 +1,8 @@
-<?php namespace Ejetar\Formatter\Test\Parsers;
+<?php namespace MetabytesSRO\Formatter\Test\Parsers;
 
-use Ejetar\Formatter\Parsers\Parser;
-use Ejetar\Formatter\Parsers\XmlParser;
-use Ejetar\Formatter\Test\TestCase;
+use MetabytesSRO\Formatter\Parsers\Parser;
+use MetabytesSRO\Formatter\Parsers\XmlParser;
+use MetabytesSRO\Formatter\Test\TestCase;
 
 class XmlParserTest extends TestCase
 {

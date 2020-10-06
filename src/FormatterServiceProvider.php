@@ -1,4 +1,4 @@
-<?php namespace Ejetar\Formatter;
+<?php namespace MetabytesSRO\Formatter;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -21,7 +21,7 @@ class FormatterServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('soapbox/laravel-formatter');
+        $this->package('metabytes-sro/laravel-formatter');
     }
 
     /**
@@ -32,7 +32,7 @@ class FormatterServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['formatter'] = $this->app->share(function ($app) {
-            return new Ejetar\Formatter\Formatter;
+            return new MetabytesSRO\Formatter\Formatter;
         });
     }
 

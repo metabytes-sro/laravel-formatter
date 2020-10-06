@@ -1,7 +1,7 @@
-<?php namespace Ejetar\Formatter\Parsers;
+<?php namespace MetabytesSRO\Formatter\Parsers;
 
 use Illuminate\Support\Str;
-use Ejetar\Formatter\ArrayHelpers;
+use MetabytesSRO\Formatter\ArrayHelpers;
 use Spyc;
 
 /**

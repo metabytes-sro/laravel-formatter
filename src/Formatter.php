@@ -1,11 +1,11 @@
-<?php namespace Ejetar\Formatter;
+<?php namespace MetabytesSRO\Formatter;
 
 use InvalidArgumentException;
-use Ejetar\Formatter\Parsers\ArrayParser;
-use Ejetar\Formatter\Parsers\CsvParser;
-use Ejetar\Formatter\Parsers\JsonParser;
-use Ejetar\Formatter\Parsers\XmlParser;
-use Ejetar\Formatter\Parsers\YamlParser;
+use MetabytesSRO\Formatter\Parsers\ArrayParser;
+use MetabytesSRO\Formatter\Parsers\CsvParser;
+use MetabytesSRO\Formatter\Parsers\JsonParser;
+use MetabytesSRO\Formatter\Parsers\XmlParser;
+use MetabytesSRO\Formatter\Parsers\YamlParser;
 
 class Formatter {
     /**

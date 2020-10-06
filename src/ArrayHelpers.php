@@ -1,5 +1,5 @@
 <?php
-namespace Ejetar\Formatter;
+namespace MetabytesSRO\Formatter;
 
 use Illuminate\Support\Arr;
 

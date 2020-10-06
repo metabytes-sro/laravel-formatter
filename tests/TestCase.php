@@ -1,4 +1,4 @@
-<?php namespace Ejetar\Formatter\Test;
+<?php namespace MetabytesSRO\Formatter\Test;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {

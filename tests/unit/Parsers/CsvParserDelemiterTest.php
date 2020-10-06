@@ -1,8 +1,8 @@
-<?php namespace Ejetar\Formatter\Test\Parsers;
+<?php namespace MetabytesSRO\Formatter\Test\Parsers;
 
-use Ejetar\Formatter\Parsers\CsvParser;
-use Ejetar\Formatter\Parsers\Parser;
-use Ejetar\Formatter\Test\TestCase;
+use MetabytesSRO\Formatter\Parsers\CsvParser;
+use MetabytesSRO\Formatter\Parsers\Parser;
+use MetabytesSRO\Formatter\Test\TestCase;
 
 class CsvParserDelemiterTest extends TestCase
 {
