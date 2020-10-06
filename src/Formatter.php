@@ -1,4 +1,6 @@
-<?php namespace MetabytesSRO\Formatter;
+<?php
+
+namespace MetabytesSRO\Formatter;
 
 use InvalidArgumentException;
 use MetabytesSRO\Formatter\Parsers\ArrayParser;
@@ -7,14 +9,15 @@ use MetabytesSRO\Formatter\Parsers\JsonParser;
 use MetabytesSRO\Formatter\Parsers\XmlParser;
 use MetabytesSRO\Formatter\Parsers\YamlParser;
 
-class Formatter {
+class Formatter
+{
     /**
      * Add class constants that help define input format
      */
-    const CSV  = 'csv';
+    const CSV = 'csv';
     const JSON = 'json';
-    const XML  = 'xml';
-    const ARR  = 'array';
+    const XML = 'xml';
+    const ARR = 'array';
     const YAML = 'yaml';
 
     private static $supportedTypes = [self::CSV, self::JSON, self::XML, self::ARR, self::YAML];
@@ -24,12 +27,17 @@ class Formatter {
      */
     private $parser;
 
+    private function __construct($parser)
+    {
+        $this->parser = $parser;
+    }
+
     /**
      * Make: Returns an instance of formatter initialized with data and type
      *
-     * @param  mixed       $data      The data that formatter should parse
-     * @param  string      $type      The type of data formatter is expected to parse
-     * @param  string      $delimiter The delimitation of data formatter to csv
+     * @param mixed $data The data that formatter should parse
+     * @param string $type The type of data formatter is expected to parse
+     * @param string $delimiter The delimitation of data formatter to csv
      * @return Formatter
      */
     public static function make($data, $type, $delimiter = null)
@@ -58,11 +66,6 @@ class Formatter {
         throw new InvalidArgumentException(
             'make function only accepts [csv, json, xml, array] for $type but ' . $type . ' was provided.'
         );
-    }
-
-    private function __construct($parser)
-    {
-        $this->parser = $parser;
     }
 
     public function toJson()

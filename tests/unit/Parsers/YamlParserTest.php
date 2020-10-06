@@ -17,8 +17,8 @@ class YamlParserTest extends TestCase
     public function testtoArrayReturnsArrayRepresenationOfYamlObject()
     {
         $expected = ['foo' => 'bar'];
-        $parser   = new XmlParser('<xml><foo>bar</foo></xml>');
-        $x        = new YamlParser($parser->toYaml());
+        $parser = new XmlParser('<xml><foo>bar</foo></xml>');
+        $x = new YamlParser($parser->toYaml());
         $this->assertEquals($expected, $x->toArray());
     }
 

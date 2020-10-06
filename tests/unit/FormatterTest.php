@@ -8,7 +8,7 @@ class FormatterTest extends TestCase
     public function testFormatterProvidesCsvConstant()
     {
         $expected = 'csv';
-        $actual   = Formatter::CSV;
+        $actual = Formatter::CSV;
 
         $this->assertEquals($expected, $actual);
     }
@@ -16,7 +16,7 @@ class FormatterTest extends TestCase
     public function testFormatterProvidesJsonConstant()
     {
         $expected = 'json';
-        $actual   = Formatter::JSON;
+        $actual = Formatter::JSON;
 
         $this->assertEquals($expected, $actual);
     }
@@ -24,7 +24,7 @@ class FormatterTest extends TestCase
     public function testFormatterProvidesXmlConstant()
     {
         $expected = 'xml';
-        $actual   = Formatter::XML;
+        $actual = Formatter::XML;
 
         $this->assertEquals($expected, $actual);
     }
@@ -32,7 +32,7 @@ class FormatterTest extends TestCase
     public function testFormatterProvidesArrayConstant()
     {
         $expected = 'array';
-        $actual   = Formatter::ARR;
+        $actual = Formatter::ARR;
 
         $this->assertEquals($expected, $actual);
     }
@@ -40,7 +40,7 @@ class FormatterTest extends TestCase
     public function testFormatterProvidesYamlConstant()
     {
         $expected = 'yaml';
-        $actual   = Formatter::YAML;
+        $actual = Formatter::YAML;
 
         $this->assertEquals($expected, $actual);
     }

@@ -1,4 +1,6 @@
-<?php namespace MetabytesSRO\Formatter;
+<?php
+
+namespace MetabytesSRO\Formatter;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -32,7 +34,7 @@ class FormatterServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['formatter'] = $this->app->share(function ($app) {
-            return new MetabytesSRO\Formatter\Formatter;
+            return new MetabytesSRO\Formatter\Formatter();
         });
     }
 

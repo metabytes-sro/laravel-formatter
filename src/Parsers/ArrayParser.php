@@ -1,4 +1,6 @@
-<?php namespace MetabytesSRO\Formatter\Parsers;
+<?php
+
+namespace MetabytesSRO\Formatter\Parsers;
 
 use InvalidArgumentException;
 
@@ -14,7 +16,7 @@ class ArrayParser extends Parser
         }
 
         if (is_array($data) || is_object($data)) {
-            $this->array = (array) $data;
+            $this->array = (array)$data;
         } else {
             throw new InvalidArgumentException(
                 'ArrayParser only accepts (optionally serialized) [object, array] for $data.'

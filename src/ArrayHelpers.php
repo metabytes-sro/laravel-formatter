@@ -1,4 +1,5 @@
 <?php
+
 namespace MetabytesSRO\Formatter;
 
 use Illuminate\Support\Arr;

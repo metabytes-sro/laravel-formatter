@@ -1,4 +1,6 @@
-<?php namespace MetabytesSRO\Formatter\Parsers;
+<?php
+
+namespace MetabytesSRO\Formatter\Parsers;
 
 use InvalidArgumentException;
 use League\Csv\Reader;
@@ -28,7 +30,7 @@ class CsvParser extends Parser
         $temp = $this->csv->jsonSerialize();
 
         $headings = $temp[0];
-        $result   = $headings;
+        $result = $headings;
 
         if (count($temp) > 1) {
             $result = [];

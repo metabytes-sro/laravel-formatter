@@ -14,7 +14,7 @@ class ParserTest extends TestCase
     {
         $data = '{"foo":"bar","bar":"foo"}';
 
-        $actual   = Formatter::make($data, Formatter::JSON)->toArray();
+        $actual = Formatter::make($data, Formatter::JSON)->toArray();
         $expected = ['foo' => 'bar', 'bar' => 'foo'];
 
         $this->assertEquals($expected, $actual);
@@ -29,7 +29,7 @@ class ParserTest extends TestCase
     {
         $data = ['foo' => 'bar', 'bar' => 'foo'];
 
-        $actual   = Formatter::make($data, Formatter::ARR)->toJson();
+        $actual = Formatter::make($data, Formatter::ARR)->toJson();
         $expected = '{"foo":"bar","bar":"foo"}';
 
         $this->assertEquals($expected, $actual);
@@ -44,7 +44,7 @@ class ParserTest extends TestCase
     {
         $data = 'foo,bar,bing,bam,boom';
 
-        $actual   = Formatter::make($data, Formatter::CSV)->toArray();
+        $actual = Formatter::make($data, Formatter::CSV)->toArray();
         $expected = ['foo', 'bar', 'bing', 'bam', 'boom'];
 
         $this->assertEquals($expected, $actual);

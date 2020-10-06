@@ -1,4 +1,6 @@
-<?php namespace MetabytesSRO\Formatter\Parsers;
+<?php
+
+namespace MetabytesSRO\Formatter\Parsers;
 
 class JsonParser extends Parser
 {

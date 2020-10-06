@@ -1,4 +1,6 @@
-<?php namespace MetabytesSRO\Formatter\Parsers;
+<?php
+
+namespace MetabytesSRO\Formatter\Parsers;
 
 use Illuminate\Support\Str;
 use MetabytesSRO\Formatter\ArrayHelpers;
@@ -21,13 +23,6 @@ abstract class Parser
     abstract public function __construct($data);
 
     /**
-     * Used to retrieve a (php) array representation of the data encapsulated within our Parser.
-     *
-     * @return array
-     */
-    abstract public function toArray();
-
-    /**
      * Return a json representation of the data stored in the parser
      *
      * @return string A json string representing the encapsulated data
@@ -36,6 +31,13 @@ abstract class Parser
     {
         return json_encode($this->toArray());
     }
+
+    /**
+     * Used to retrieve a (php) array representation of the data encapsulated within our Parser.
+     *
+     * @return array
+     */
+    abstract public function toArray();
 
     /**
      * Return a yaml representation of the data stored in the parser
@@ -48,12 +50,25 @@ abstract class Parser
     }
 
     /**
+     * Return an xml representation of the data stored in the parser
+     *
+     * @param string $baseNode
+     * @param string $encoding
+     * @param bool $formatted
+     * @return string An xml string representing the encapsulated data
+     */
+    public function toXml($baseNode = 'xml', $encoding = 'utf-8', $formatted = false)
+    {
+        return $this->xmlify($this->toArray(), null, $baseNode, $encoding, $formatted);
+    }
+
+    /**
      * To XML conversion
      *
-     * @param  mixed       $data
-     * @param  null        $structure
-     * @param  null|string $basenode
-     * @param  null|string $encoding
+     * @param mixed $data
+     * @param null $structure
+     * @param null|string $basenode
+     * @param null|string $encoding
      * @return string
      */
     private function xmlify($data, $structure = null, $basenode = 'xml', $encoding = 'utf-8', $formatted = false)
@@ -69,7 +84,7 @@ abstract class Parser
 
         // Force it to be something useful
         if (!is_array($data) && !is_object($data)) {
-            $data = (array) $data;
+            $data = (array)$data;
         }
 
         foreach ($data as $key => $value) {
@@ -83,7 +98,7 @@ abstract class Parser
                 // convert our booleans to 0/1 integer values so they are
                 // not converted to blanks.
                 if (is_bool($value)) {
-                    $value = (int) $value;
+                    $value = (int)$value;
                 }
 
                 // no numeric keys in our xml please!
@@ -119,7 +134,7 @@ abstract class Parser
 
         // return formatted xml
         if ($formatted) {
-            $dom               = dom_import_simplexml($structure)->ownerDocument;
+            $dom = dom_import_simplexml($structure)->ownerDocument;
             $dom->formatOutput = true;
             return $dom->saveXML();
         }
@@ -129,36 +144,14 @@ abstract class Parser
     }
 
     /**
-     * Return an xml representation of the data stored in the parser
-     *
-     * @param  string $baseNode
-     * @param  string $encoding
-     * @param  bool   $formatted
-     * @return string An xml string representing the encapsulated data
-     */
-    public function toXml($baseNode = 'xml', $encoding = 'utf-8', $formatted = false)
-    {
-        return $this->xmlify($this->toArray(), null, $baseNode, $encoding, $formatted);
-    }
-
-    private function csvify($data)
-    {
-        $results = [];
-        foreach ($data as $row) {
-            $results[] = array_values(ArrayHelpers::dot($row));
-        }
-        return $results;
-    }
-
-    /**
      * Ported from laravel-formatter
      * https://github.com/SoapBox/laravel-formatter
      *
      * Return a csv representation of the data stored in the parser
-     * @author  Daniel Berry <daniel@danielberry.me>
+     * @return string An csv string representing the encapsulated data
      * @license MIT License (see LICENSE.readme included in the bundle)
      *
-     * @return string An csv string representing the encapsulated data
+     * @author  Daniel Berry <daniel@danielberry.me>
      */
     public function toCsv($newline = "\n", $delimiter = ",", $enclosure = '"', $escape = "\\")
     {
@@ -175,7 +168,7 @@ abstract class Parser
         };
 
         $headings = ArrayHelpers::dotKeys($data[0]);
-        $result   = [];
+        $result = [];
 
         foreach ($data as $row) {
             $result[] = array_values(ArrayHelpers::dot($row));
@@ -186,9 +179,18 @@ abstract class Parser
         $output = $enclosure . implode($enclosure . $delimiter . $enclosure, $escaper($headings)) . $enclosure . $newline;
 
         foreach ($data as $row) {
-            $output .= $enclosure . implode($enclosure . $delimiter . $enclosure, $escaper((array) $row)) . $enclosure . $newline;
+            $output .= $enclosure . implode($enclosure . $delimiter . $enclosure, $escaper((array)$row)) . $enclosure . $newline;
         }
 
         return rtrim($output, $newline);
+    }
+
+    private function csvify($data)
+    {
+        $results = [];
+        foreach ($data as $row) {
+            $results[] = array_values(ArrayHelpers::dot($row));
+        }
+        return $results;
     }
 }
