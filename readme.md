@@ -15,6 +15,8 @@ A package that enables you to convert your data into various formats such as JSO
 
 Works with Laravel 6.x, 7.x, 8.x
 
+Based on [Soapbox/laravel-formatter](https://github.com/Soapbox/laravel-formatter), [ejetar/laravel-formatter](https://github.com/ejetar/laravel-formatter)
+
 ## Installation
 
 Through command line:
