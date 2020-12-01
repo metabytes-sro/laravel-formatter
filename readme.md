@@ -13,6 +13,8 @@
 ## About
 A package that enables you to convert your data into various formats such as JSON, XML, CSV and YAML. Based on FuelPHP's 💧 formatter class.
 
+Works with Laravel 6.x, 7.x, 8.x
+
 ## Installation
 
 Through command line:
