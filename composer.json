@@ -2,7 +2,7 @@
   "name": "metabytes-sro/laravel-formatter",
   "description": "A formatting library that converts data output between XML, CSV, JSON, TXT, YAML and a few others.",
   "homepage": "https://github.com/metabytes-sro/laravel-formatter",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "readme": "README.md",
   "type": "library",
   "license": "MIT",
@@ -35,10 +35,10 @@
     "yaml"
   ],
   "require": {
-    "php": ">=7.2.5",
-    "league/csv": "~9.0",
+    "php": "^8.1",
+    "league/csv": "^9.9",
     "mustangostang/spyc": "~0.6",
-    "illuminate/support": "~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0|~6.0|~7.0|~8.0"
+    "illuminate/support": "^10.0"
   },
   "autoload": {
     "psr-4": {
@@ -57,6 +57,6 @@
     "test": "vendor\\bin\\phpunit"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.0"
+    "phpunit/phpunit": "^9.5.10"
   }
 }
